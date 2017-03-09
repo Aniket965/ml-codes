@@ -18,10 +18,20 @@ def yintercept(xs,ys,m):
      return c;
 c= yintercept(xs,ys,m);
 print(c)
+def squared_error(ys_orig,ys_line):
+    return sum((ys_line-ys_orig)**2);
+
+
+
+def coefficient_of_determination(ys_orign,ys_line):
+    y_mean_line = [mean(ys_orign) for y in ys_orign];
+    squared_error_regr= squared_error(ys_orign,ys_line);
+    squared_error_y_mean= squared_error(ys_orign,y_mean_line);
+    return (1 - (squared_error_regr/squared_error_y_mean));
+rl = [[m*x]+c for x in xs];
+rsquare =coefficient_of_determination(ys,rl);
 predic_x= 8;
 predict_y=(m*predic_x)+c;
-print(predict_y)
-rl = [[m*x]+c for x in xs];
-plt.scatter(xs,ys)
+plt.scatter(xs,ys);
 plt.plot(xs,rl);
 plt.show();
