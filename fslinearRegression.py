@@ -51,3 +51,6 @@ predict_y=(m*predic_x)+c;
 plt.scatter(xs,ys);
 plt.plot(xs,rl);
 plt.show();
+
+# for one feature only build from complete scratch
+
