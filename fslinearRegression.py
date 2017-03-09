@@ -1,12 +1,28 @@
 from statistics import mean
 import numpy as np
 import matplotlib.pylab as plt
+import random
 from matplotlib import style;
 xs =np.array([1,2,3,4,5,6],dtype=np.float64);
 ys=np.array([5,4,6,5,6,7],dtype=np.float64);
 style.use('fivethirtyeight');
 # plt.scatter(xs,ys);
 # plt.show()
+# def create_dataset(hm,variance,step=2,correlation=False):
+#     val=1;
+#     ys=[];
+#     for i in range(hm):
+#         y=val+random.randrange(-variance,variance);
+#         ys.append(y);
+#         if correlation and correlation=='pos'
+
+
+
+
+
+
+    return np.array(xs,dtype=np.float64),np.array(ys,dtype=np.float64)
+
 def bestfit(xs,ys):
     m=(((mean(xs)*mean(ys))-mean(xs*ys))/ 
      ((mean(xs)*mean(xs))-mean(xs*xs)));
