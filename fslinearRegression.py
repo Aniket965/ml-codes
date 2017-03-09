@@ -21,7 +21,7 @@ style.use('fivethirtyeight');
 
 
 
-    return np.array(xs,dtype=np.float64),np.array(ys,dtype=np.float64)
+    # return np.array(xs,dtype=np.float64),np.array(ys,dtype=np.float64)
 
 def bestfit(xs,ys):
     m=(((mean(xs)*mean(ys))-mean(xs*ys))/ 
