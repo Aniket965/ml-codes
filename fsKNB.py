@@ -12,7 +12,7 @@ dataset={'k':[[1,2],[2,3],[3,1]],'r':[[6,5],[7,7],[8,6]]};
 # [[plt.scatter(j[0],j[1],s=100,color=i) for j in dataset[i]] for i in dataset];
 
 # plt.show();
-asd
+
 def k_nearest_neighbor(data,predict,k=3):
     if len(data)>=k:
         warnings.warn('badass');
@@ -29,8 +29,9 @@ def k_nearest_neighbor(data,predict,k=3):
 result = k_nearest_neighbor(dataset,[5,7],k=3);
 print(result);
 
-
 #confidence vs accuracy
 #comes from classifier
 #confidence = counter(votes).most_common(1)[0][1]/k;
 #confidence can be low as 60% as in 98%accuracy;
+
+#ends here
