@@ -5,11 +5,11 @@
 #  directly proportional to dataset size
 
 import numpy as np;
-from sklearn import preprocessing,cross_validation,neighbors;
+from sklearn import cross_validation,preprocessing,neighbors;
 import pandas as pd;
 df=pd.read_csv('breast-cancer-wisconsin.data');
 df.replace('?',-99999,inplace=True);
-print(df);
+
 #droping the useless coloumns
 df.drop(['id'],1,inplace=True);
 X= np.array(df.drop(['class'],1));
@@ -20,13 +20,10 @@ clf= neighbors.KNeighborsClassifier();
 clf.fit(X_train,y_train);
 accuracy = clf.score(X_test,y_test);
 print(accuracy);
-
 #prediction
-
-example= np.array([4,2,1,1,1,2,3,2,1]);
-# for reshaping the array 
-example = example.reshape(len(example),-1);
-prediction = clf.predict(example);
-print(prediction);
+# example= np.array([4,2,1,1,1,2,3,2,1]);
+# # for reshaping the array 
+# example = example.reshape(len(example),-1);
+# prediction = clf.predict(example);
+# print(prediction);
 # prediction 97.80%
-
