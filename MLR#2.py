@@ -12,3 +12,4 @@ clf.fit(X_train,y_train);
 
 print y_test;
 print clf.predict(X_test);
+
